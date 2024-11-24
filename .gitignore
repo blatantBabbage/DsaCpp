@@ -1,0 +1,55 @@
+# Ignore JetBrains CLion specific files
+.idea/
+*.iml
+
+# Ignore CMake build directories
+cmake-build-*/
+
+# Ignore build artifacts
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.class
+
+# Ignore generated files
+Makefile
+CMakeCache.txt
+CMakeFiles/
+Testing/
+CTestTestfile.cmake
+cmake_install.cmake
+compile_commands.json
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore binaries and libraries from third-party dependencies
+bin/
+lib/
+
+# Ignore user-specific files
+.vscode/
+*.user
+*.user.*
+*.suo
+*.db
+*.log
+
+# If using Python or scripts
+__pycache__/
+*.pyc
+
+# Add additional ignores specific to your project needs here
