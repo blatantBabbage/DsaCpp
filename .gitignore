@@ -24,6 +24,7 @@ Testing/
 CTestTestfile.cmake
 cmake_install.cmake
 compile_commands.json
+*.dSYM
 
 # Ignore logs and temporary files
 *.log
