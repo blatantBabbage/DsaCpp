@@ -22,17 +22,18 @@ int missingNumber(int a[], int n)
 
     // Initialize XOR1, to n natural number
     int xor1 = 0;
-    for(int i = 1; i<n; i++)
-    {
-        xor1 = xor1^i;
-    }
 
     // Initialize XOR2, by looping on array which missing number
     int xor2 = 0;
+
     for(int i = 0; i<n-1; i++)
     {
         xor2 = xor2^a[i];
+        xor1 = xor1^(i+1);
     }
+
+    // as the loop is ending at n-1, but we need xor1 till n natural number for the final xor number we will get it as below
+    xor1 = xor1^n;
 
     return xor1^xor2;
 }
