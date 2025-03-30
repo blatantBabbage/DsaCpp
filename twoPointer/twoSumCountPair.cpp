@@ -7,9 +7,9 @@
 
 using namespace std;
 
-/*
- * Question : "Two Sum Pair Count"
- * Given an array of doubles, return the count pairs whose sum is less than or equal to the target number.
+/**
+ Question : "Two Sum Pair Count"
+ Given an array of doubles, return the count pairs whose sum is less than or equal to the target number.
  */
 
 int countPairBruteForce(const vector<double>& arr, double target)
@@ -88,3 +88,44 @@ int main()
     // print result
     cout << "Optimal Count of pairs : " << resultOptimal;
 }
+
+/**
+Dry run:
+Input: arr = [1, 2, 3, 4], target = 5
+
+Sorted Array: [1, 2, 3, 4]
+
+Iteration 1:
+L → 1                 R → 4
+1 + 4 = 5 (≤ Target ✅)
+Count = Count + (R - L) = 0 + (3 - 0) = 3
+L++ → 2
+
+Iteration 2:
+     L → 2            R → 4
+2 + 4 = 6 (> Target ❌)
+R-- → 3
+
+Iteration 3:
+     L → 2       R → 3
+2 + 3 = 5 (≤ Target ✅)
+Count = Count + (R - L) = 3 + (2 - 1) = 4
+L++ → 3
+
+Iteration 4:
+          L → 3   R → 3
+L and R meet, loop ends.
+
+Final Count = **4**
+
+Explanation:
+L → and R → indicate the left and right pointers.
+
+✅ means the sum is within the target, so valid pairs are counted.
+
+❌ means the sum exceeds the target, so the right pointer moves left.
+
+L++ and R-- show pointer updates.
+
+Final Count is displayed at the end.
+*/
